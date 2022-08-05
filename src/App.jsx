@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>Front</div>
+      <div>FINAL PROJECT U3</div>
     </div>
   )
 }
