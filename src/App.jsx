@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import './App.css';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import { completeTodo, deleteTodo, getTodos, hardDeleteTodo } from "./api/travelApi";
+import { completeTodo, createTodo, deleteTodo, getTodos, hardDeleteTodo } from "./api/travelApi";
 
 
 function App() {
 
   const [todos, setTodos] = useState([]);
+
+  const [newTodo, setNewTodo] = useState({});
 
   async function fetchTodos() {
     const fetchedTodos = await getTodos();
@@ -65,7 +67,13 @@ function App() {
   const eraseTodo = async (id) => {
     await hardDeleteTodo(id);
     fetchTodos();
-  }
+  };
+
+  const handleCreateTodo = async (todo) => {
+    setNewTodo({title:"", description:"", image:""});
+    await createTodo(todo);
+    fetchTodos();
+  };
 
   return (
     <div className='App'>
@@ -80,6 +88,39 @@ function App() {
               toggleTodo={toggleComepleted}
             />
           ))}
+          <div>
+            Title
+            <input
+              type="text"
+              name="title"
+              value={newTodo.title}
+              onChange={(e) => 
+                setNewTodo(current => ({...current, title: e.target.value}))
+              }
+              />
+
+            Description
+            <input 
+              type="text" 
+              name="description"
+              value={newTodo.description}
+              onChange={(e) => 
+                setNewTodo(current => ({...current, description: e.target.value}))
+              }
+              />
+            URL
+            <input 
+              type="text" 
+              name="url"
+              value={newTodo.image}
+              onChange={(e) => 
+                setNewTodo(current => ({...current, image: e.target.value}))
+              }
+              />
+
+            <button onClick={() => handleCreateTodo(newTodo)}>Registrar Viaje</button>
+          </div>
+          
       </div>
       <Footer />
     </div>

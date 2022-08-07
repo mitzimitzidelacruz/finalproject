@@ -41,3 +41,17 @@ export async function hardDeleteTodo(id) {
     console.log(error);
   }
 }
+
+export async function createTodo(todo) {
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(todo),
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
