@@ -30,3 +30,14 @@ export async function completeTodo(id) {
     console.log(error);
   }
 }
+
+export async function hardDeleteTodo(id) {
+  try {
+    const response = await fetch(`${API_URL}/${id}`, {
+      method: "PATCH"
+    });
+    return response.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
