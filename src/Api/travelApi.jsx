@@ -11,7 +11,7 @@ export async function getTodos() {
 
 export async function deleteTodo(id) {
   try {
-    const response = await fetch(${API_URL}/delete/${id}, {
+    const response = await fetch(`${API_URL}/delete/${id}`, {
       method: "PATCH",
     });
     return response.json();
@@ -22,7 +22,7 @@ export async function deleteTodo(id) {
 
 export async function completeTodo(id) {
   try {
-    const response = await fetch(${API_URL}/complete/${id}, {
+    const response = await fetch(`${API_URL}/complete/${id}`, {
       method: "PATCH",
     });
     return response.json();

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import './App.css';
-import Navbar from './components/navbar'
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 import { completeTodo, deleteTodo, getTodos } from "./api/travelApi";
 
 
@@ -21,6 +22,7 @@ function App() {
     completed,
     removeTodo,
     toggleTodo,
+    image
   }) => (
     <div className="todo-item">
       <h2>{title}</h2>
@@ -33,6 +35,7 @@ function App() {
         />
         <b>{completed ? " Completed" : "Not completed"}</b>{" "}
       </p>
+      <img src={image} />
       <p>
         Last update:<b>{updatedAt}</b>{" "}
       </p>
@@ -67,6 +70,7 @@ function App() {
             />
           ))}
       </div>
+      <Footer />
     </div>
   );
 }
