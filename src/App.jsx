@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import './App.css';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import { completeTodo, deleteTodo, getTodos } from "./api/travelApi";
+import { completeTodo, deleteTodo, getTodos, hardDeleteTodo } from "./api/travelApi";
 
 
 function App() {
@@ -40,7 +40,11 @@ function App() {
       <p>
         Last update:<b>{updatedAt}</b>{" "}
       </p>
-      <button onClick={() => removeTodo(_id)}>Delete</button>
+      <div>
+        <button onClick={() => removeTodo(_id)}>Delete</button>
+        <button onClick={() => eraseTodo(_id)}>Hard Delete</button>
+      </div>
+      
     </div>
   );
 
@@ -57,6 +61,11 @@ function App() {
     const updated = await completeTodo(id);
     fetchTodos();
   };
+
+  const eraseTodo = async (id) => {
+    await hardDeleteTodo(id);
+    fetchTodos();
+  }
 
   return (
     <div className='App'>
