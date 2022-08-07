@@ -11,7 +11,6 @@ function App() {
 
   async function fetchTodos() {
     const fetchedTodos = await getTodos();
-    console.log({ fetchedTodos });
     setTodos(fetchedTodos);
   }
 
@@ -22,8 +21,9 @@ function App() {
     updatedAt,
     completed,
     removeTodo,
+    hardDeleteTodo,
     toggleTodo,
-    image
+    image,
   }) => (
     <div className="todo-item">
       <h2>{title}</h2>
@@ -42,9 +42,9 @@ function App() {
       </p>
       <div>
         <button onClick={() => removeTodo(_id)}>Delete</button>
-        <button onClick={() => eraseTodo(_id)}>Hard Delete</button>
+        <button onClick={() => hardDeleteTodo(_id)}>Hard Delete</button>
       </div>
-      
+
     </div>
   );
 
@@ -75,6 +75,7 @@ function App() {
           todos.map((todo) => (
             <TodoComponent
               {...todo}
+              hardDeleteTodo={eraseTodo}
               removeTodo={removeTodo}
               toggleTodo={toggleComepleted}
             />

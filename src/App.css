@@ -182,6 +182,7 @@ a {
 
 a:hover {
     color: #924b0d;
+    text-shadow: 0px 3px 10px #ff4b04;
 }
 
 @media screen and (max-width: 770px) {
