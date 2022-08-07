@@ -1,20 +1,22 @@
+import { useTranslation } from 'react-i18next';
 
 function Navbar() {
+    const { t } = useTranslation();
 
     return (
         <nav>
           <ul>
               <li> 
-                  <a href="/">Home</a> 
+                  <a href="/">{t("home")}</a> 
               </li>
               <li> 
-                  <a href="/">Categories</a>
+                  <a href="/">{t("categories")}</a>
               </li>
               <li>
-                  <a href="/">Logs</a>
+                  <a href="/">{t("logs")}</a>
               </li>
               <li> 
-                  <a href="/">List of travels</a>    
+                  <a href="/">{t("list")}</a>    
               </li>
           </ul>
         </nav>

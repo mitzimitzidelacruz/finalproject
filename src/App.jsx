@@ -6,6 +6,7 @@ import { completeTodo, deleteTodo, getTodos } from "./api/travelApi";
 
 
 function App() {
+
   const [todos, setTodos] = useState([]);
 
   async function fetchTodos() {
