@@ -37,7 +37,6 @@ function App() {
         Last update:<b>{updatedAt}</b>{" "}
       </p>
       <button onClick={() => removeTodo(_id)}>Delete</button>
-      <hr />
     </div>
   );
 
