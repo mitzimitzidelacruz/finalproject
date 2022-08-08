@@ -2,5 +2,9 @@
     "home": "Inicio",
     "categories": "Categorias",
     "logs":  "Registros",
-    "list": "Lista de viajes"
+    "list": "Lista de viajes",
+    "title": "Titulo del viaje",
+    "description": "Descripción del viaje",
+    "url": "URL de la imagen",
+    "register": "Registrar viaje"
 }

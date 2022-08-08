@@ -3,9 +3,12 @@ import './App.css';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import { completeTodo, createTodo, deleteTodo, getTodos, hardDeleteTodo } from "./api/travelApi";
+import { useTranslation } from 'react-i18next';
 
 
 function App() {
+
+  const { t } = useTranslation();
 
   const [todos, setTodos] = useState([]);
 
@@ -76,7 +79,7 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className='app'>
       <Navbar />
       <div className="todo-list">
         {todos &&
@@ -88,8 +91,8 @@ function App() {
               toggleTodo={toggleComepleted}
             />
           ))}
-          <div>
-            Title
+          <div className="create">
+            <label>{t("title")}</label>
             <input
               type="text"
               name="title"
@@ -99,7 +102,7 @@ function App() {
               }
               />
 
-            Description
+            <label>{t("description")}</label>
             <input 
               type="text" 
               name="description"
@@ -108,7 +111,7 @@ function App() {
                 setNewTodo(current => ({...current, description: e.target.value}))
               }
               />
-            URL
+            <label>{t("url")}</label>
             <input 
               type="text" 
               name="url"
@@ -118,7 +121,7 @@ function App() {
               }
               />
 
-            <button onClick={() => handleCreateTodo(newTodo)}>Registrar Viaje</button>
+            <button onClick={() => handleCreateTodo(newTodo)}>{t("register")}</button>
           </div>
           
       </div>

@@ -29,12 +29,13 @@ export async function completeTodo(id) {
   } catch (error) {
     console.log(error);
   }
+
 }
 
 export async function hardDeleteTodo(id) {
   try {
     const response = await fetch(`${API_URL}/${id}`, {
-      method: "PATCH"
+      method: "DELETE"
     });
     return response.json();
   } catch (error) {
@@ -49,7 +50,7 @@ export async function createTodo(todo) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(todo),
+      body: JSON.stringify( todo ),
     });
   } catch (error) {
     console.log(error);
