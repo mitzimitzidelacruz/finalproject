@@ -29,8 +29,7 @@ export async function completeTodo(id) {
   } catch (error) {
     console.log(error);
   }
-<<<<<<< Updated upstream
-=======
+
 }
 
 export async function hardDeleteTodo(id) {
@@ -56,5 +55,4 @@ export async function createTodo(todo) {
   } catch (error) {
     console.log(error);
   }
->>>>>>> Stashed changes
 }

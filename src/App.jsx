@@ -79,7 +79,7 @@ function App() {
   };
 
   return (
-    <div className='App'>
+    <div className='app'>
       <Navbar />
       <div className="todo-list">
         {todos &&
