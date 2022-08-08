@@ -1,11 +1,16 @@
 {
     "home": "Inicio",
-    "categories": "Categorias",
+    "categories": "Grupos",
     "logs":  "Registros",
     "list": "Lista de viajes",
     "title": "Titulo del viaje",
     "description": "Descripción del viaje",
     "url": "URL de la imagen",
     "register": "Registrar viaje",
-    "update": "Actualizar viaje"
+    "update": "Actualizar viaje",
+    "login": "Iniciar Sesión",
+    "deleteFile": "Archivar",
+    "hardDelete": "Borrar",
+    "language": "Cambiar a Ingles",
+    "welcome": "Bienvenido a TRAVEL COMPANION"
 }
