@@ -6,5 +6,6 @@
     "title": "Title of the travel",
     "description": "Description of the travel",
     "url": "URL of the image",
-    "register": "Register travel"
+    "register": "Register travel",
+    "update": "Update travel"
 }

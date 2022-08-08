@@ -6,5 +6,6 @@
     "title": "Titulo del viaje",
     "description": "Descripción del viaje",
     "url": "URL de la imagen",
-    "register": "Registrar viaje"
+    "register": "Registrar viaje",
+    "update": "Actualizar viaje"
 }

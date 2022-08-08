@@ -1,4 +1,5 @@
 const API_URL = "http://localhost:3000/todos";
+// Modificar esta URL una vez subido el back
 
 export async function getTodos() {
   try {
@@ -29,13 +30,12 @@ export async function completeTodo(id) {
   } catch (error) {
     console.log(error);
   }
-
 }
 
 export async function hardDeleteTodo(id) {
   try {
     const response = await fetch(`${API_URL}/${id}`, {
-      method: "DELETE"
+      method: "DELETE",
     });
     return response.json();
   } catch (error) {
@@ -50,8 +50,24 @@ export async function createTodo(todo) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify( todo ),
+      body: JSON.stringify(todo),
     });
+    return response.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function updateTodo(id, todo) {
+  try {
+    const response = await fetch(`${API_URL}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(todo),
+    });
+    return response.json();
   } catch (error) {
     console.log(error);
   }
