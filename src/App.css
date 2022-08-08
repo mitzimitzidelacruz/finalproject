@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -16,6 +16,8 @@ body {
 }
 
 nav {
+    position: sticky;
+    top: 0;
     user-select: none;
     margin-left: 10vw;
     height: 100px;
@@ -23,10 +25,10 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: transparent;
-    box-shadow: 0px 0px 2px #ababab;
+    background-color: #92280d;
+    box-shadow: 0px 0px 20px #642d01;
     border-radius: 0 0 10px 10px;
-    border: 5px #da9e69;
+    border: 5px #cf670c;
     border-style: none dashed dashed;
 }
 
@@ -40,7 +42,7 @@ nav ul {
 
 li a {
     cursor: pointer;
-    color: #924b0d !important;
+    color: #ff6309 !important;
     outline: transparent;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -48,7 +50,7 @@ li a {
 
 li a:hover {
     font-size: 2rem;
-    text-shadow: 0px 3px 5px #da9e69;
+    text-shadow: 0px 3px 5px #ff4b04;
 }
 
 /* Objetos DB */
@@ -77,6 +79,7 @@ li a:hover {
 }
 
 .todo-item button {
+    margin-left: 20px;
     cursor: pointer;
     border-radius: 25% 0 25% 0;
     border-width: 1px;
@@ -86,13 +89,17 @@ li a:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.todo-item button:hover {
-    background-color: #924b0d;
+.todo-item div button:last-child {
+    border-radius: 0 25% 0 25%;
+}
+
+button:hover {
+    background-color: #924b0d !important;
     color: whitesmoke;
     transform: scale(1.3);
 }
 
-/* Footer */
+/***     Footer     ***/
 
 footer {
     background-color: #24252a;
@@ -177,6 +184,7 @@ a {
 
 a:hover {
     color: #924b0d;
+    text-shadow: 0px 3px 10px #ff4b04;
 }
 
 @media screen and (max-width: 770px) {
@@ -212,4 +220,38 @@ div.redes {
 img {
     width: 200px;
     height: 200px;
+}
+
+/***     Create Div     ***/
+
+.create {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.create input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 10px;
+    width: 800px;
+}
+
+.create button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 25% 0 25% 0;
+    border-width: 1px;
+    border-color: #924b0d;
+    padding: 10px 10px 10px 10px;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
 }

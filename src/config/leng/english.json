@@ -1,0 +1,10 @@
+{
+    "home": "Home",
+    "categories": "Categories",
+    "logs":  "Logs",
+    "list": "List of travels",
+    "title": "Title of the travel",
+    "description": "Description of the travel",
+    "url": "URL of the image",
+    "register": "Register travel"
+}
