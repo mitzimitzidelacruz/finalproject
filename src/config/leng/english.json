@@ -1,7 +1,7 @@
 {
     "home": "Home",
-    "categories": "Groups",
-    "logs":  "Logs",
+    "account": "Account",
+    "logs":  "Add Travel",
     "list": "List of travels",
     "title": "Title of the travel",
     "description": "Description of the travel",
@@ -9,8 +9,21 @@
     "register": "Register travel",
     "update": "Update travel",
     "login": "Log-in",
+    "welcomeLogin": "Login",
+    "welcomeRegister": "Create Account",
+    "logout": "Log-out",
+    "registerU": "Register",
     "deleteFile": "Archive",
     "hardDelete": "Delete Forever",
     "language": "Change to Spanish",
-    "welcome": "Welcome to Your TRAVEL COMPANION"
+    "welcome": "Welcome to Your TRAVEL COMPANION",
+    "notFound": "The page you are looking for is not available.",
+    "welcome2": "Save your best moments with us!",
+    "ErrorNF": "Back to Home",
+    "name": "Name",
+    "role": "Role",
+    "email": "Email",
+    "editA": "Edit Account",
+    "changeP": "Change Password",
+    "deleteA": "Delete Account"
 }

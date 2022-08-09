@@ -1,43 +1,66 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Footer from "./components/footer";
-import Navbar from "./components/navbar";
+import NavBar from "./components/navbar";
 import List from './pages/list';
 import Register from "./pages/register";
 import Home from "./pages/home";
 import Login from "./pages/login";
-import Group from "./pages/group";
+import Account from "./pages/account";
+import NotFound from "./pages/notFound";
+import NewRegister from "./pages/newRegister";
+import PrivateRoute from "./components/privateRoute";
+import PublicRoute from "./components/publicRoute";
+import roles from "./helpers/roles";
+
+import AdminUsers from "./pages/adminUsers";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
 
   return (
     <div>
-        <Navbar />
-        <BrowserRouter>
+        <NavBar />
             <Routes>
 
               <Route path="/" element={
+              <PublicRoute>
                 <Home />
-              } />
+              </PublicRoute>} />
 
               <Route path="/list" element={
+              <PrivateRoute>
                 <List />
-              } />
+              </PrivateRoute>} />
 
-              <Route path="/register" element={
+              <Route path="/add" element={
+              <PrivateRoute>
                 <Register />
-              } />
+              </PrivateRoute>} />
 
               <Route path="/login" element={
+              <PublicRoute>
                 <Login />
-              } />
+              </PublicRoute>} />
 
-              <Route path="/group" element={
-                <Group />
-              } />
+              <Route path="/register" element={
+              <PublicRoute>
+                <NewRegister />
+              </PublicRoute>} />
+
+              <Route path="/account" element={
+              <PrivateRoute>
+                <Account />
+              </PrivateRoute>} />
+
+              <Route path="/admin/users" element={
+              <PrivateRoute hasRoles={roles.admin}>
+                <AdminUsers />
+              </PrivateRoute>} />
+
+              <Route path="*" element={<NotFound />} />
 
             </Routes>
-        </BrowserRouter>
         <Footer />
     </div>
 

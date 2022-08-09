@@ -1,7 +1,7 @@
 {
     "home": "Inicio",
-    "categories": "Grupos",
-    "logs":  "Registros",
+    "account": "Cuenta",
+    "logs":  "Añadir Viaje",
     "list": "Lista de viajes",
     "title": "Titulo del viaje",
     "description": "Descripción del viaje",
@@ -9,8 +9,21 @@
     "register": "Registrar viaje",
     "update": "Actualizar viaje",
     "login": "Iniciar Sesión",
+    "welcomeLogin": "Inicie Sesión",
+    "welcomeRegister": "Crear Usuario",
+    "logout": "Cerrar Sesión",
+    "registerU": "Registrarse",
     "deleteFile": "Archivar",
     "hardDelete": "Borrar",
     "language": "Cambiar a Ingles",
-    "welcome": "Bienvenido a TRAVEL COMPANION"
+    "welcome": "Bienvenido a TRAVEL COMPANION",
+    "notFound": "La página que busca no esta disponible.",
+    "welcome2": "Guarda tus mejores momentos con nosotros!",
+    "ErrorNF": "Volver al Inicio",
+    "name": "Nombre",
+    "role": "Rol",
+    "email": "Correo",
+    "editA": "Editar Cuenta",
+    "changeP": "Cambiar Contraseña",
+    "deleteA": "Borrar Cuenta"
 }

@@ -3,9 +3,9 @@ import { useLocation } from 'react-router-dom';
 import useAuth from "../auth/useAuth";
 import Form from 'react-bootstrap/Form';
 
-const userCredentials = {id: 1, name: 'Omar', email: 'martindelaC@gmail.com', role: 'admin'};
+const userCredentials = {};
 
-function Login() {
+function NewRegister() {
 
     const location = useLocation();
 
@@ -15,9 +15,9 @@ function Login() {
 
     return (
         <div className='page'>
-            <h1>{t("welcomeLogin")}</h1>
+            <h1>{t("welcomeRegister")}</h1>
             
-            <Form>
+        <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
@@ -31,10 +31,18 @@ function Login() {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
 
-            <button type="submit" onClick={() => login(userCredentials, location.state?.from)}>{t("login")}</button>
+            <Form.Group className="mb-3">
+                <Form.Label>Rol</Form.Label>
+                <Form.Select controlId="formBasicRole">
+                    <option>admin</option>
+                    <option>regular</option>
+                </Form.Select>
+            </Form.Group>
+
+            <button type="submit" onClick={() => login(userCredentials, location.state?.from)}>{t("registerU")}</button>
 
 
-          </Form>
+        </Form>
 
              
         </div> 
@@ -42,4 +50,4 @@ function Login() {
 
 }
 
-export default Login;
+export default NewRegister;
